@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavBar } from "./components/NavBar";
@@ -10,10 +11,16 @@ import { Footer } from "./components/Footer";
 import { Education } from './components/Education';
 import { Experience } from './components/Experience';
 import { useEffect } from "react";
-
+import { LandingPage } from './components/Landing';
 
 
 function App() {
+  const [showPortfolio, setShowPortfolio] = useState(false);
+
+  const handleFinish = () => {
+    setShowPortfolio(true);
+  };
+
   useEffect(() => {
     
     const handleVisibilityChange = () => {
@@ -29,6 +36,10 @@ function App() {
   }, []);
   return (
     <div className="App">
+       {!showPortfolio ? (
+        <LandingPage onFinish={handleFinish} />
+      ) : (
+        <>
       <NavBar />
       <Banner />
       <Skills />
@@ -37,6 +48,8 @@ function App() {
       <Education/>
       <Contact />
       <Footer />
+      </>
+      )}
     </div>
   );
 }

@@ -63,6 +63,7 @@ export const Contact = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
+      id='connect'
     >
       <h2 className="mb-4">Get in Touch</h2>
       <form onSubmit={formik.handleSubmit} className="animated-form" style={{ overflowX: 'hidden' }}>
