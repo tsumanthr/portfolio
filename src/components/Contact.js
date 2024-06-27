@@ -9,17 +9,17 @@ export const Contact = () => {
   const [status, setStatus] = useState({});
 
   const formInitialDetails = {
-    fullName: '',
-    email: '',
+    from_name: '',
+    email_id: '',
     message: '',
-    phoneNumber: ''
+    phone_number: ''
   };
 
   const validationSchema = Yup.object().shape({
-    fullName: Yup.string().required('Name is required'),
-    email: Yup.string().email('Invalid email').required('Email is required'),
+    from_name: Yup.string().required('Name is required'),
+    email_id: Yup.string().email('Invalid email').required('Email is required'),
     message: Yup.string().required('Message is required'),
-    phoneNumber: Yup.string()
+    phone_number: Yup.string()
       .required('Phone number is required')
       .matches(/^\d{10}$/, 'Phone number must be exactly 10 digits')
   });
@@ -34,22 +34,22 @@ export const Contact = () => {
     setButtonText('Sending...');
     try {
       const templateParams = {
-        fullName: values.fullName,
-        email: values.email,
+        from_name: values.from_name,
+        email_id: values.email_id,
         message: values.message,
-        phoneNumber: values.phoneNumber
+        phone_number: values.phone_number
       };
 
       const result = await emailjs.send(
-        'service_gvsj81s', // Replace with your service ID
-        'template_o35rt3g', // Replace with your template ID
+        'service_fb5ddfd', // Replace with your service ID
+        'template_54u4l19', // Replace with your template ID
         templateParams,
-        'EhuAcs_wzpdUIGpK7' // Replace with your EmailJS user ID (API key)
+        'Ywoq1NzUD_xt5kH8z' // Replace with your EmailJS user ID (API key)
       );
-
+ 
       console.log('Email sent successfully:', result);
       setStatus({ success: true, message: 'Message sent successfully' });
-      resetForm(); // Reset form fields after successful submission
+      resetForm(); // Reset form fields after successful submission,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
     } catch (error) {
       console.error('Email send error:', error);
       setStatus({ success: false, message: 'Something went wrong, please try again later.' });
@@ -69,49 +69,49 @@ export const Contact = () => {
       <form onSubmit={formik.handleSubmit} className="animated-form" style={{ overflowX: 'hidden' }}>
         <motion.input
           type="text"
-          name="fullName"
-          value={formik.values.fullName}
+          name="from_name"
+          value={formik.values.from_name}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           placeholder="Your Name"
-          className={`form-control ${formik.touched.fullName && formik.errors.fullName ? 'is-invalid' : ''}`}
+          className={`form-control ${formik.touched.from_name && formik.errors.from_name ? 'is-invalid' : ''}`}
           whileHover={{ scale: 1.05 }}
           whileFocus={{ scale: 1.05 }}
         />
-        {formik.touched.fullName && formik.errors.fullName && (
-          <div className="invalid-feedback">{formik.errors.fullName}</div>
+        {formik.touched.from_name && formik.errors.from_name && (
+          <div className="invalid-feedback">{formik.errors.from_name}</div>
         )}
 
         <motion.input
           type="number"
-          name="phoneNumber"
-          value={formik.values.phoneNumber}
+          name="phone_number"
+          value={formik.values.phone_number}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           placeholder="Your Phone Number"
-          className={`form-control ${formik.touched.phoneNumber && formik.errors.phoneNumber ? 'is-invalid' : ''}`}
+          className={`form-control ${formik.touched.phone_number && formik.errors.phone_number ? 'is-invalid' : ''}`}
           style={{ overflow: 'hidden' }}
           whileHover={{ scale: 1.05 }}
           whileFocus={{ scale: 1.05 }}
           pattern="[0-9]{10}" 
         />
-        {formik.touched.phoneNumber && formik.errors.phoneNumber && (
-          <div className="invalid-feedback">{formik.errors.phoneNumber}</div>
+        {formik.touched.phone_number && formik.errors.phone_number && (
+          <div className="invalid-feedback">{formik.errors.phone_number}</div>
         )}
 
         <motion.input
           type="email"
-          name="email"
-          value={formik.values.email}
+          name="email_id"
+          value={formik.values.email_id}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           placeholder="Your Email"
-          className={`form-control ${formik.touched.email && formik.errors.email ? 'is-invalid' : ''}`}
+          className={`form-control ${formik.touched.email_id && formik.errors.email_id ? 'is-invalid' : ''}`}
           whileHover={{ scale: 1.05 }}
           whileFocus={{ scale: 1.05 }}
         />
-        {formik.touched.email && formik.errors.email && (
-          <div className="invalid-feedback">{formik.errors.email}</div>
+        {formik.touched.email_id && formik.errors.email_id && (
+          <div className="invalid-feedback">{formik.errors.email_id }</div>
         )}
 
         <motion.textarea

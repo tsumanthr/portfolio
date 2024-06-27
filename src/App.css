@@ -30,11 +30,18 @@ html {
 body {
   font-weight: 400;
   overflow-x: hidden;
+  overflow-y: scroll; /* Enable vertical scrollbar */
   position: relative;
   background-color: #121212 !important;
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
 }
+
+/* Hide side scrollbar */
+body::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers */
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -800,4 +807,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   animation: flip 5s infinite;
   animation-delay: calc(.2s * var(--i));
   font-weight: 600;
+}
+.waviy2 {
+  position: relative;
+}
+
+.waviy2 span {
+  position: relative;
+  display: inline-block;
+  margin-left: 100px;
+  padding-left: 30px;
+  padding-top: 240px;
+  font-size: 4.6rem;
+  color: white;
+  text-transform: uppercase;
+  animation: flip 1.9s infinite;
+  animation-delay: calc(.1s * var(--i));
+  font-weight: 400;
 }

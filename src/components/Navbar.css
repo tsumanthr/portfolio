@@ -1,0 +1,60 @@
+/* NavBar.css */
+
+.navbar-scrolled {
+    background-color: #333; /* Change background color when scrolled */
+  }
+  
+  .custom-toggler {
+    border-color: #fff; /* Customize toggle button color */
+  }
+  
+  .sidebar {
+    background-color: #222;
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    padding-top: 70px;
+    overflow-y: auto;
+  }
+  
+  .sidebar-link {
+    color: #fff;
+    padding: 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar-link:hover,
+  .sidebar-link.active {
+    background-color: #555;
+  }
+  
+  .sidebar-icon {
+    margin-right: 10px;
+  }
+  
+  .sidebar-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    padding: 0 15px;
+    text-align: center;
+  }
+  
+  .connect-link {
+    display: inline-block;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .connect-link:hover {
+    background-color: #0056b3;
+  }
+  
