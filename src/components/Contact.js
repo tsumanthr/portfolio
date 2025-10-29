@@ -41,7 +41,7 @@ export const Contact = () => {
       };
 
       const result = await emailjs.send(
-        'service_fb5ddfd', // Replace with your service ID
+        'service_omyd30c', // Replace with your service ID
         'template_54u4l19', // Replace with your template ID
         templateParams,
         'Ywoq1NzUD_xt5kH8z' // Replace with your EmailJS user ID (API key)
@@ -75,8 +75,8 @@ export const Contact = () => {
           onBlur={formik.handleBlur}
           placeholder="Your Name"
           className={`form-control ${formik.touched.from_name && formik.errors.from_name ? 'is-invalid' : ''}`}
-          whileHover={{ scale: 1.05 }}
-          whileFocus={{ scale: 1.05 }}
+          whileHover={{ scale: 1.02 }}
+          whileFocus={{ scale: 1.00 }}
         />
         {formik.touched.from_name && formik.errors.from_name && (
           <div className="invalid-feedback">{formik.errors.from_name}</div>

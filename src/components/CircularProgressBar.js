@@ -12,7 +12,7 @@ const CircularProgressBar = ({ percentage }) => {
 
     const startPercentage = currentPercentage;
     const endPercentage = percentage;
-    const duration = 2000; // Animation duration in milliseconds
+    const duration = 1500; // Animation duration in milliseconds
     const startTime = Date.now();
 
     const animate = () => {

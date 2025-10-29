@@ -30,17 +30,17 @@ export const Experience = () => {
   };
  
   return (
-    <section className="skill" id="experience">
+    <section className="experience" id="experience">
         <div className="container" >
             <div className="row">
                 <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
+                    <div className="experience-bx wow zoomIn">
                         <h2>Experience</h2>
                         <br /><br />
                         {/* <p></p> */}
                         <h4>BRIGHTCOM GROUP</h4>
                         <h6>Software Engineer Trainee</h6>
-                        <p>Nov-2022 to Present Date</p>
+                        <p>Nov-2022 to Aug-2024</p>
                     </div>
                 </div>
             </div>

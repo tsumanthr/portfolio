@@ -32,7 +32,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll; /* Enable vertical scrollbar */
   position: relative;
-  background-color: #121212 !important;
+  background-color: #3d3530 !important;
   color: #fff !important;
   font-family: 'Centra', sans-serif !important;
 }
@@ -241,9 +241,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Banner Css ************/
 .banner {
-  margin-top: -50px;
+  margin-top: -30px;
   padding: 260px 0 100px 0;
-  background-image: url('./assets/img/banner.png');
+  /* background-image: url('./assets/img/banner.png'); */
+  background-color: #484f4f ;
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -363,13 +364,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill {
   padding: 0 0 50px 0;
   position: relative;
+  background-color: #5e6868;
 }
 .skill-bx {
   background: #151515;
   border-radius: 64px;
   text-align: center;
-  padding: 60px 50px;
-  margin-top: -60px;
+  padding: 50px 50px;
+  margin-top: 30px;
 }
 
 .skill h2 {
@@ -393,10 +395,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 0 auto 15px auto;
 }
 .skill-slider .item h5 {
-  margin-left: 20px;
+  margin-left: -50px;
 }
 .skill-slider .item2 h5 {
-  margin-left: -5px;
+  margin-left: -50px;
 }
 .background-image-left {
   top: 28%;
@@ -410,7 +412,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project {
   padding: 80px 0;
   position: relative;
-  background-color: black;
+  background-color: #b2b8b8;
 }
 .project h2 {
 	font-size: 45px;
@@ -532,6 +534,106 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
+/******* Experince Css ********/
+.experience {
+  padding: 0 0 50px 0;
+  position: relative;
+  background-color: #e3e6e6;
+}
+.experience-bx {
+  background: #151515;
+  border-radius: 64px;
+  text-align: center;
+  padding: 50px 50px;
+  margin-top: 30px;
+}
+
+.experience h2 {
+	font-size: 45px;
+	font-weight: 700;
+}
+.experience p {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px 0 75px 0;
+}
+/* .experience-slider {
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+}
+.experience .item img {
+  width: 50%;
+  margin: 0 auto 15px auto;
+}
+.experience .item h5 {
+  margin-left: -50px;
+}
+.experience .item2 h5 {
+  margin-left: -50px;
+}
+.background-image-left {
+  top: 28%;
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  z-index: -4;
+} */
+
+
+/******* Education Css **********/
+.education {
+  padding: 10px 0 50px 0;
+  position: relative;
+  background-color: #2f3838;
+}
+.education-bx {
+  background: #151515;
+  border-radius: 64px;
+  text-align: center;
+  padding: 50px 50px;
+  margin-top: 30px;
+}
+
+.education h2 {
+	font-size: 45px;
+	font-weight: 700;
+}
+.education p {
+    color: #B8B8B8;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    margin: 14px 0 75px 0;
+}
+.education-slider {
+  width: 85%;
+  margin: 0 auto;
+  position: relative;
+}
+.education .item p{
+  margin-right: 50px;
+}
+.education .item img {
+  width: 50%;
+  margin: 0 auto 15px auto;
+}
+.education .item h5 {
+  margin-left: -50px;
+}
+.education .item2 h5 {
+  margin-left: -50px;
+}
+.background-image-left {
+  top: 28%;
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  z-index: -4;
+}
+
 /************ Projects Css ************/
 /* .contact {
   background-image: url('./assets/img/contact.png');
@@ -609,20 +711,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	position: absolute;
 }
   */
-  /* AnimatedContactForm.css */
+  /*********** AnimatedContactForm.css *****************/
 
 .animated-contact-form {
   max-width: 400px; /* Set maximum width for the contact form */
-  margin: 0 auto; /* Center the form horizontally */
+  margin: 20px auto; /* Center the form horizontally */
   padding: 0px;
   padding-bottom: -20px;
   /* background-color: #f8f9fa; */
   border-radius: 10px;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);   */
 }
 
 .animated-contact-form h2 {
-  margin-bottom: 20px;
+  /* margin-bottom: 0px; */
   font-size: 24px;
 }
 
@@ -633,14 +735,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ced4da;
-  border-radius: 1px;
+  border-radius: 5px;
   transition: all 0.2s ease;
 }
 
 .animated-form input:focus,
-.animated-form textarea:focus {
-  outline: none;
-  border-color: #007bff;
+.animated-form textarea:focus,
+.animated-form input:hover{
+  /* outline: none; */
+  /* margin-left: 20px; */
+  /* border-color: #007bff; */
 }
 
 .animated-form .btn-primary {

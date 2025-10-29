@@ -25,11 +25,11 @@ export const Education = () => {
     };
 
     return (
-        <section className="skill" id="education">
+        <section className="education" id="education">
             <div className="container" style={{ marginTop: '50px' }}>
                 <div className="row">
                     <div className="col-12">
-                        <div className="skill-bx wow zoomIn">
+                        <div className="education-bx wow zoomIn">
                             <h2>Education</h2>
                             <br /><br />
                             <Carousel 
@@ -39,20 +39,25 @@ export const Education = () => {
                                 customButtonGroup={<React.Fragment></React.Fragment>}
                                 arrows={false} // Disable default arrows
                             >
+                                 <div className="item">
+                                    <CircularProgressBar  />
+                                    <h5>University of East London <br/> Msc Computing </h5>
+                                    <p>2024 - Present</p>
+                                </div>
                                 <div className="item">
                                     <CircularProgressBar percentage={60.7} />
-                                    <h5>NIT ANDHRA PRADESH</h5>
-                                    <p>Chemical Engineering</p>
+                                    <h5>NIT ANDHRA PRADESH <br/>Btech  Chemical Engineering </h5>
+                                    <p>2018 - 2022 </p>
                                 </div>
                                 <div className="item">
                                     <CircularProgressBar percentage={87.8} />
-                                    <h5>NRI Junior College</h5>
-                                    <p>12th - MPC</p>
+                                    <h5>NRI Junior College <br/> 12th - MPC </h5>
+                                    <p>2016 - 2018</p>
                                 </div>
                                 <div className="item">
                                     <CircularProgressBar percentage={85} />
-                                    <h5>Sri Sidhartha <br />High School</h5>
-                                    <p>SSC</p>
+                                    <h5>Sri Sidhartha <br />High School <br/> SSC </h5>
+                                    {/* <p className='item3'>SSC</p> */}
                                 </div>
                             </Carousel>
                         </div>
